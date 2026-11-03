@@ -1,4 +1,5 @@
 import './style.css';
+import logoUrl from '../logo.png';
 
 const countries = [
   ['RU','俄罗斯','Russian Federation'],['KZ','哈萨克斯坦','Kazakhstan'],['CN','中国','China'],['UA','乌克兰','Ukraine'],
@@ -21,7 +22,7 @@ function header() {
   return `
     <header class="topbar">
       <a class="brand" href="#" data-page="home" aria-label="晴天接码 首页">
-        <img class="brand-logo" src="/logo.png" alt="晴天接码" /><span class="brand-name">晴天接码<span>GLOBAL SMS SERVICE</span></span>
+        <img class="brand-logo" src="${logoUrl}" alt="晴天接码" /><span class="brand-name">晴天接码<span>GLOBAL SMS SERVICE</span></span>
       </a>
       <button class="menu-toggle" aria-label="打开菜单" data-action="menu">☰</button>
       <nav class="${state.mobileMenu ? 'nav open' : 'nav'}">
@@ -75,12 +76,12 @@ function docs() {
 }
 
 function footer() {
-  return `<footer class="footer"><div class="footer-main"><a class="brand brand-footer" href="#" data-page="home"><img class="brand-logo" src="/logo.png" alt="晴天接码" /><span class="brand-name">晴天接码<span>GLOBAL SMS SERVICE</span></span></a><p>全球短信服务工作台<br/>清晰、可靠、面向开发者。</p><div class="footer-links"><a href="#" data-page="home">主页</a><a href="#" data-page="receive">短信接收</a><a href="#" data-page="about">关于我们</a><a href="#" data-page="docs">API 文档</a></div></div><div class="footer-bottom"><span>© 2026 晴天接码. Independent interface project.</span><span>演示版本 · 尚未连接真实服务</span></div></footer>`;
+  return `<footer class="footer"><div class="footer-main"><a class="brand brand-footer" href="#" data-page="home"><img class="brand-logo" src="${logoUrl}" alt="晴天接码" /><span class="brand-name">晴天接码<span>GLOBAL SMS SERVICE</span></span></a><p>全球短信服务工作台<br/>清晰、可靠、面向开发者。</p><div class="footer-links"><a href="#" data-page="home">主页</a><a href="#" data-page="receive">短信接收</a><a href="#" data-page="about">关于我们</a><a href="#" data-page="docs">API 文档</a></div></div><div class="footer-bottom"><span>© 2026 晴天接码. Independent interface project.</span><span>演示版本 · 尚未连接真实服务</span></div></footer>`;
 }
 
 function modal() {
   if (!state.modal) return '';
-  return `<div class="modal-backdrop" data-action="backdrop"><section class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title"><button class="modal-close" data-action="close" aria-label="关闭">×</button><div class="brand modal-brand"><img class="brand-logo" src="/logo.png" alt="晴天接码" /><span class="brand-name">晴天接码<span>GLOBAL SMS SERVICE</span></span></div><div class="eyebrow dark">WELCOME BACK</div><h2 id="auth-title">登录工作台</h2><p>账户认证功能需要连接你自己的后端服务。</p><form id="demo-auth"><label>用户名或邮箱<input name="username" placeholder="请输入用户名或邮箱" required /></label><label>密码<input name="password" type="password" placeholder="请输入密码" required /></label><button class="btn btn-primary btn-full" type="submit">继续</button></form><div class="demo-note">演示界面：不会提交或保存你输入的账户信息。</div></section></div>`;
+  return `<div class="modal-backdrop" data-action="backdrop"><section class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title"><button class="modal-close" data-action="close" aria-label="关闭">×</button><div class="brand modal-brand"><img class="brand-logo" src="${logoUrl}" alt="晴天接码" /><span class="brand-name">晴天接码<span>GLOBAL SMS SERVICE</span></span></div><div class="eyebrow dark">WELCOME BACK</div><h2 id="auth-title">登录工作台</h2><p>账户认证功能需要连接你自己的后端服务。</p><form id="demo-auth"><label>用户名或邮箱<input name="username" placeholder="请输入用户名或邮箱" required /></label><label>密码<input name="password" type="password" placeholder="请输入密码" required /></label><button class="btn btn-primary btn-full" type="submit">继续</button></form><div class="demo-note">演示界面：不会提交或保存你输入的账户信息。</div></section></div>`;
 }
 
 function render() {
